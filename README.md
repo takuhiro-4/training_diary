@@ -1,24 +1,24 @@
-# README
+# アプリケーション名: training_diary
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーションの概要: 該当の日付にその日行ったことを記載できる
 
-Things you may want to cover:
+# 利用方法: トップページの「新しい日記」をクリックしてタイトルと内容と日付・時間を入力してカレンダーに記録を残していく
 
-* Ruby version
+# 目指した課題解決: ボディーメイク初心者の食事・トレーニングの内容を簡単に記録し比較したい。その日の食事・トレーニングの内容を記録することにより、食生活やトレーニングの内容がどのように変化したかを比較することができるようになります。
 
-* System dependencies
+# 洗い出した要件: 
 
-* Configuration
+# 実装した機能についてのGIFと説明:
 
-* Database creation
+# 実装予定の機能:
 
-* Database initialization
+# データベース設計
 
-* How to run the test suite
+## eventテーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+| Column  | Type       | Options     |
+| ------- | ---------- | ----------- |
+| name    | string     | nill: false |
+| content | text       | nill: false |
 
-* Deployment instructions
-
-* ...
+# ローカルでの動作方法:
