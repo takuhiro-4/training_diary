@@ -2,15 +2,21 @@
 
 <h1>ボディメイク記録</h1>
 
-<%= month_calendar diaries: @diaries do |date, diaries| %>
-  <%= date.day %>
+<div class="new_diary">
+  <%= link_to '新しい 日記', new_diary_path %>
+</div>
 
-  <% diaries.each do |diary| %>
-    <div>
-      <%= diary.name %>
-    </div>
+<div class="calendar">
+  <%= month_calendar events: @diaries do |date, diaries| %>
+    <%= date.day %>
+
+    <% diaries.each do |diary| %>
+      <div>
+        <%= link_to diary.name, diary %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>
 
 <%# <table>
   <thead>
@@ -36,4 +42,4 @@
 
 <br>
 
-<%= link_to '新しい 日記', new_diary_path %>
+
