@@ -1,14 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @diary.name %>
-</p>
-
-<p>
-  <strong>Start time:</strong>
-  <%= @diary.start_time %>
-</p>
-
-<%= link_to 'Edit', edit_diary_path(@diary) %> |
-<%= link_to 'Back', diaries_path %>
+<div class="show_index">
+  <p class="name">
+    <a class="name_a">
+    【<%= @diary.name %>】
+    </a>
+    <a class="name_b">
+    <%= @diary.start_time.day %>日
+    </a>
+  </p>
+    <strong>内容</strong>
+  <div class="content">
+    <p class="content_a"><%= simple_format(@diary.content) %></p>
+  </div>
+  <div class="btn">
+    <%= link_to '削除', @diary, method: :delete, data: { confirm: 'Are you sure?' } %> |
+    <%= link_to '編集', edit_diary_path(@diary) %> |
+    <a href="/diaries">戻る</a>
+  </div>
+</div>
