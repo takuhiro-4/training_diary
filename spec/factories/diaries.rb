@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :diary do
-    name    {'tset'}
+    name    {'test'}
     content {'sample'}
   end
 end
