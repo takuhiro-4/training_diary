@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<div class="show_index">
+<div class="back">
   <p class="name">
     <a class="name_a">
     【<%= @diary.name %>】
     </a>
     <a class="name_b">
-    <%= @diary.start_time.day %>日
+    :<%= @diary.start_time.day %>日
     </a>
   </p>
-    <strong>内容</strong>
+    <strong class="content_title">内容</strong>
   <div class="content">
     <p class="content_a"><%= simple_format(@diary.content) %></p>
   </div>
