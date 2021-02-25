@@ -1,6 +1,12 @@
-<h1>Editing Diary</h1>
+<div class="back">
+  <div class="field_set">
+    <h1>日記の編集</h1>
+  </div>
 
-<%= render 'form', diary: @diary %>
+  <%= render 'form', diary: @diary %>
 
-<%= link_to 'Show', @diary %> |
-<%= link_to 'Back', diaries_path %>
+  <div class="btn">
+    <%= link_to '詳細', @diary %> |
+    <%= link_to '戻る', diaries_path %>
+  </div>
+</div>
